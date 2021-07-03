@@ -1,0 +1,138 @@
+.navbar {
+    position: relative;
+}
+
+
+@media(max-width:$md){
+    .navbar__menu .navbar__menu__dropdown {
+    display: none;
+    }
+}
+
+@media(max-width:$lg){
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    [class^='absolute']{
+      display: none;  
+    }
+    
+}
+
+@media(min-width: $lg){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.fas {
+    font-size: $h1-fs;
+    padding: calc(#{$base-fs} *2);
+    margin: 0 $base-fs;
+    color: $color-font;
+}
+@media(min-width: $md){
+    .fas{
+        display: none;
+    }
+}
+
+@media(max-width:$lg){
+    .fas:hover + .navbar__menu__dropdown{
+        display: block;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        background-color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        & a{
+            padding: calc(#{$base-fs} *2);
+            font-size: calc(#{$h1-fs});
+        }
+    }
+}
+
+.navbar__logo {
+    font-size: $h1-fs;
+    margin: 0 $base-fs;
+    padding: calc(#{$base-fs} *2);
+    
+}
+
+.navbar__menu {
+    color: $color-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.navbar__menu__dropdown {
+    font-size: $h2-fs;
+    margin: 0 $base-fs;
+    padding: $base-fs;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+   
+    list-style: none;
+   
+    color: #fff;
+}
+
+@media(max-width: $md){
+    .dropdown__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.dropdown__container {
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.navbar__menu__dropdown  li  a {
+    padding: 1.5rem 1rem;
+}
+
+.absolute-dots {
+    width: $h2-fs*3;
+    height: $h2-fs*3;
+    background: radial-gradient( aliceblue 15%, black 0);
+    background-size: 16px 16px;
+    position: absolute;
+    top:0;
+    left: calc(30vw + 5px);
+}
+
+.absolute-rectangle {
+    width: $h2-fs*2;
+    height: $h2-fs;
+    background-color: $color-page;
+    border: 2px solid $color-contrast;
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+}
+
+

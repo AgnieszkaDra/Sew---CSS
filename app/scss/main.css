@@ -1,0 +1,248 @@
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #4d3900;
+  color: aliceblue;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.ml-2 {
+  margin-left: 2rem !important;
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+  background-color: aliceblue;
+  color: black;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 740px;
+    background-color: yellow;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    background-color: aqua;
+  }
+}
+
+.navbar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  background-color: cadetblue;
+}
+
+.navbar {
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .navbar__menu .navbar__menu__dropdown {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  [class^='absolute'] {
+    display: none;
+  }
+}
+
+@media (min-width: 1199px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.fas {
+  font-size: 4.2358vw;
+  padding: calc(1vw *2);
+  margin: 0 1vw;
+  color: aliceblue;
+}
+
+@media (min-width: 991px) {
+  .fas {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .fas:hover + .navbar__menu__dropdown {
+    display: block;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background-color: gray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fas:hover + .navbar__menu__dropdown a {
+    padding: calc(1vw *2);
+    font-size: calc(4.2358vw);
+  }
+}
+
+.navbar__logo {
+  font-size: 4.2358vw;
+  margin: 0 1vw;
+  padding: calc(1vw *2);
+}
+
+.navbar__menu {
+  color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.navbar__menu__dropdown {
+  font-size: 2.61792vw;
+  margin: 0 1vw;
+  padding: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ccc;
+  list-style: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown__container {
+  margin: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__menu__dropdown li a {
+  padding: 1.5rem 1rem;
+}
+
+.absolute-dots {
+  width: 7.85377vw;
+  height: 7.85377vw;
+  background: radial-gradient(aliceblue 15%, black 0);
+  background-size: 16px 16px;
+  position: absolute;
+  top: 0;
+  left: calc(30vw + 5px);
+}
+
+.absolute-rectangle {
+  width: 5.23585vw;
+  height: 2.61792vw;
+  background-color: black;
+  border: 2px solid #de6916;
+  position: absolute;
+  left: 20%;
+  bottom: 20%;
+}
+
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

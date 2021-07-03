@@ -1,0 +1,38 @@
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #4d3900;
+  color: aliceblue;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.ml-2 {
+  margin-left: 2rem !important;
+}
+
+ul {
+  padding: 0;
+}
+/*# sourceMappingURL=base.css.map */

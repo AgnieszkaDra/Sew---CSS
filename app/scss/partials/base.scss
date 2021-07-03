@@ -1,0 +1,41 @@
+@import 'variables.scss';
+
+:root{
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $color-background;
+    color: $color-font;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: $color-font;
+   
+}
+
+.ml-2 {
+    margin-left: 2rem !important;
+}
+
+ul {
+    padding: 0;
+}
+
+

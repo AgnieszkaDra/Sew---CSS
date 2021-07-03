@@ -1,0 +1,22 @@
+$color-background: rgb(77,57,0);
+$color-page: black;
+$color-font: aliceblue;
+$color-contrast: rgb(222,105,22);
+
+$golden-ratio: 1.618;
+$base-fs: 1vw; 
+$h4-fs: $base-fs;
+$h3-fs: $h4-fs * $golden-ratio;
+$h2-fs: $h3-fs * $golden-ratio;
+$h1-fs: $h2-fs * $golden-ratio;
+
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+$xl: 1399px;
+
+ 
+  
+
+

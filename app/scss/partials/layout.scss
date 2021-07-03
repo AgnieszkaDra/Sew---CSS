@@ -1,0 +1,34 @@
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+}
+
+
+
+@media(max-width:$md){
+    .container{
+        max-width: 740px;
+        background-color: yellow;
+    }
+}
+
+@media(max-width:$sm){
+    .container{
+        max-width: 540px;
+        background-color: aqua;
+    }
+}
+
+.navbar {
+    grid-row: 1/2;
+    background-color: cadetblue;
+    
+}
+
+
+
