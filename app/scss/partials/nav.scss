@@ -47,7 +47,8 @@
         margin: 0;
         top: 0;
         bottom: 0;
-        left: 0;
+        z-index: 1000;
+        left: 0%;
         width: 100%;
         padding: 1.5rem 1rem;
         background-color: gray;
@@ -55,9 +56,15 @@
         align-items: center;
         justify-content: center;
         
+        display: flex;
+        align-items: center;
+        justify-content: center;
         & a{
             padding: calc(#{$base-fs} *2);
             font-size: calc(#{$h1-fs});
+            & :hover {
+                color: $color-contrast;
+            }
         }
     }
 }
@@ -66,8 +73,10 @@
     font-size: $h1-fs;
     margin: 0 $base-fs;
     padding: calc(#{$base-fs} *2);
-    
+    color: $color-font;
 }
+
+
 
 .navbar__menu {
     color: $color-font;
@@ -85,11 +94,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-   
-   
     list-style: none;
-   
     color: #fff;
 }
 
@@ -118,21 +123,33 @@
 .absolute-dots {
     width: $h2-fs*3;
     height: $h2-fs*3;
-    background: radial-gradient( aliceblue 15%, black 0);
-    background-size: 16px 16px;
+    background: radial-gradient( aliceblue 20%, black 0);
+    background-size: 25% 25%;
     position: absolute;
     top:0;
     left: calc(30vw + 5px);
+    
+    
+}
+
+.absolute-dots:hover {
+    box-shadow: 2px 4px 8px 1px  $color-contrast;
 }
 
 .absolute-rectangle {
-    width: $h2-fs*2;
-    height: $h2-fs;
+    width: $h2-fs*4;
+    height: $h2-fs*1.5;
     background-color: $color-page;
-    border: 2px solid $color-contrast;
+    
+   border: 3px solid $color-contrast;
+  
     position: absolute;
-    left: 20%;
-    bottom: 20%;
+    left: 25%;
+    bottom: 0%;
+}
+
+.absolute-rectangle:hover {
+    box-shadow: 20px darken($color-background, 25%);
 }
 
 

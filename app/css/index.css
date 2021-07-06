@@ -1,0 +1,338 @@
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #4d3900;
+  color: aliceblue; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+ul {
+  list-style: none;
+  text-decoration: none; }
+
+a {
+  display: block;
+  text-decoration: none;
+  color: aliceblue; }
+
+a:hover {
+  color: #de6916; }
+
+.ml-2 {
+  margin-left: 2rem !important; }
+
+ul {
+  padding: 0; }
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  background-color: aliceblue;
+  color: black;
+  position: relative; }
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 740px;
+    background-color: yellow; } }
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    background-color: aqua; } }
+.navbar {
+  grid-row: 1/2;
+  background-color: black; }
+
+.navbar {
+  position: relative; }
+
+@media (max-width: 991px) {
+  .navbar__menu .navbar__menu__dropdown {
+    display: none; } }
+@media (max-width: 1199px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+  [class^='absolute'] {
+    display: none; } }
+@media (min-width: 1199px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; } }
+.fas {
+  font-size: 4.235801032vw;
+  padding: calc(1vw *2);
+  margin: 0 1vw;
+  color: aliceblue; }
+
+@media (min-width: 991px) {
+  .fas {
+    display: none; } }
+@media (max-width: 1199px) {
+  .fas:hover + .navbar__menu__dropdown {
+    display: block;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    left: 0%;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .fas:hover + .navbar__menu__dropdown a {
+      padding: calc(1vw *2);
+      font-size: calc(4.235801032vw); }
+      .fas:hover + .navbar__menu__dropdown a :hover {
+        color: #de6916; } }
+.navbar__logo {
+  font-size: 4.235801032vw;
+  margin: 0 1vw;
+  padding: calc(1vw *2);
+  color: aliceblue; }
+
+.navbar__menu {
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+.navbar__menu__dropdown {
+  font-size: 2.617924vw;
+  margin: 0 1vw;
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: #fff; }
+
+@media (max-width: 991px) {
+  .dropdown__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; } }
+.dropdown__container {
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.navbar__menu__dropdown li a {
+  padding: 1.5rem 1rem; }
+
+.absolute-dots {
+  width: 7.853772vw;
+  height: 7.853772vw;
+  background: radial-gradient(aliceblue 20%, black 0);
+  background-size: 25% 25%;
+  position: absolute;
+  top: 0;
+  left: calc(30vw + 5px); }
+
+.absolute-dots:hover {
+  box-shadow: 2px 4px 8px 1px #de6916; }
+
+.absolute-rectangle {
+  width: 10.471696vw;
+  height: 3.926886vw;
+  background-color: black;
+  border: 3px solid #de6916;
+  position: absolute;
+  left: 25%;
+  bottom: 0%; }
+
+.absolute-rectangle:hover {
+  box-shadow: 20px black; }
+
+main {
+  grid-row: 2/3;
+  color: aliceblue;
+  position: relative; }
+
+@media (min-width: 1199px) {
+  main {
+    display: flex; }
+
+  main section:nth-child(1) {
+    flex: 40%; }
+
+  main section:nth-child(2) {
+    flex: 60%; } }
+@media (max-width: 1199px) {
+  main section:nth-child(1) {
+    background-image: url("model.jpg");
+    padding-bottom: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 0;
+    flex-basis: 100%;
+    position: relative;
+    opacity: 0.8; } }
+main section {
+  position: relative; }
+
+section:nth-child(1) .section-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column; }
+
+@media (max-width: 1199px) {
+  main section:nth-child(2) {
+    display: none;
+    width: 0;
+    height: 0; } }
+main section:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: black; }
+
+.mainheadline {
+  font-family: 'Festive', cursive;
+  color: #de6916;
+  word-spacing: 2;
+  font-size: 4.235801032vw; }
+
+.thirdheadline {
+  color: aliceblue;
+  font-size: 2.617924vw; }
+
+@media (max-width: 1199px) {
+  .thirdheadline, .mainheadline, .form {
+    color: black; } }
+.form {
+  width: 400px;
+  height: 90px;
+  border: 2px solid aliceblue;
+  border-radius: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+button {
+  justify-self: flex-end;
+  height: calc(90px - 4px);
+  width: calc(400px - 250px);
+  border-radius: 2em;
+  background-color: black;
+  border: 2px solid aliceblue; }
+
+button a {
+  color: aliceblue;
+  font-size: 1.618vw; }
+
+.dropdown {
+  display: inline-block;
+  position: relative; }
+
+@media (max-width: 1199px) {
+  .dropdown a {
+    color: aliceblue; } }
+form {
+  position: relative; }
+
+.dropdown {
+  width: 150px;
+  background-color: black;
+  left: 2em;
+  border-radius: 2em;
+  color: aliceblue; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  min-width: 100%;
+  color: aliceblue;
+  background-color: transparent; }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  top: 3em; }
+
+.submenu {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none; }
+
+.submenu li {
+  background-color: #de6916;
+  border-radius: 2em; }
+
+.submenu > li > a {
+  display: block;
+  padding: 0.5em;
+  color: aliceblue;
+  text-decoration: none; }
+
+.dropdown-label {
+  padding: 0.5em;
+  width: 100px; }
+
+.dropdown-label::after {
+  content: '';
+  position: absolute;
+  right: 2em;
+  top: 1em;
+  border: 0.3em solid;
+  border-color: white transparent transparent; }
+
+form {
+  position: relative; }
+
+.formabsolute {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border: 0.3em solid;
+  border-color: red transparent transparent; }
+
+.dropdown:hover .dropdown-label::after {
+  top: 0.7em;
+  border-color: transparent transparent aliceblue; }
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+body {
+  background-color: black;
+  color: white; }
+
+/*# sourceMappingURL=index.css.map */

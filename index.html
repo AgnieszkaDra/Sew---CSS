@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sew-CSS</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="app/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app/css/index.css">
 </head>
 <body>
     <div class="container">
@@ -14,7 +17,7 @@
             <div class="navbar__logo">FASHION</div>
             <nav class="navbar__menu" id="main-menu">
                 <i class="fas fa-bars"></i>
-                <div class="navbar__menu__dropdown dropdown">
+                <div class="navbar__menu__dropdown ">
                     <ul class="dropdown__container ">
                         <li class=><a href="#">Home</a></li>
                         <li class=><a href="#">About</a></li>
@@ -32,8 +35,9 @@
             </nav>
         <main>
             <section>
-                <h1>Custom Your Own Clothes</h1>
-                <h3>Try it, Wear it, Love it</h3>
+                <div class="section-container">
+                <h1 class="mainheadline">Custom Your Own Clothes</h1>
+                <h3 class="thirdheadline">Try it, Wear it, Love it</h3>
                 <div class="form">
                     <div class="dropdown">
                         <div class="dropdown-label">Dress</div>
@@ -47,12 +51,13 @@
                     
                         
                     
-                    <button></button>
+                    <button><a class="button">Custom Now </a></button>
                 </div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae quas quod ut perspiciatis commodi at delectus necessitatibus labore aspernatur fugiat non, in blanditiis assumenda! Consequatur voluptas numquam id quia?</p>
+                </div>
             </section>
             <section>
-                <img src="img/model.jpg">
+                <img src="app/img/model.jpg"> 
             </section>
         </main>
         <footer>

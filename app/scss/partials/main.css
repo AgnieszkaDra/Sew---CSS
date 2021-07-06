@@ -1,0 +1,217 @@
+main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  background-color: crimson;
+  color: aliceblue;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  main {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main section:nth-child(1) {
+  background-image: url("Love1.jpg");
+  padding-bottom: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  position: relative;
+}
+
+section:nth-child(1) .section-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section:nth-child(2) {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 991px) {
+  main section:nth-child(1) {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    background-color: goldenrod;
+  }
+  main section:nth-child(2) {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+  }
+}
+
+main section:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainheadline {
+  font-family: 'Festive', cursive;
+  color: #de6916;
+  word-spacing: 2;
+  font-size: 4.2358vw;
+}
+
+.thirdheadline {
+  color: aliceblue;
+  font-size: 2.61792vw;
+}
+
+@media (max-width: 1199px) {
+  .thirdheadline {
+    color: #de6916;
+  }
+}
+
+.form {
+  width: 400px;
+  height: 90px;
+  border: 2px solid #de6916;
+  border-radius: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  justify-self: flex-end;
+  height: calc(90px - 4px);
+  width: calc(400px - 250px);
+  border-radius: 2em;
+  background-color: #de6916;
+}
+
+button a {
+  color: aliceblue;
+  font-size: 1.618vw;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+@media (max-width: 1199px) {
+  .dropdown {
+    color: #de6916;
+  }
+  .dropdown a {
+    color: #de6916;
+  }
+}
+
+form {
+  position: relative;
+}
+
+.dropdown {
+  width: 150px;
+  background-color: #de6916;
+  left: 2em;
+  border-radius: 2em;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 2.1em;
+  min-width: 100%;
+  color: aliceblue;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.submenu {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  border: 1px solid blue;
+}
+
+.submenu > li + li {
+  border-top: 1px solid blue;
+}
+
+.submenu > li > a {
+  display: block;
+  padding: 0.5em;
+  color: red;
+  text-decoration: none;
+}
+
+.dropdown-label {
+  padding: 0.5em;
+  width: 100px;
+}
+
+.dropdown-label::after {
+  content: '';
+  position: absolute;
+  right: 2em;
+  top: 1em;
+  border: 0.3em solid;
+  border-color: white transparent transparent;
+}
+
+form {
+  position: relative;
+}
+
+.formabsolute {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border: 0.3em solid;
+  border-color: red transparent transparent;
+}
+
+.dropdown:hover .dropdown-label::after {
+  top: 0.7em;
+  border-color: transparent transparent whitesmoke;
+}
+/*# sourceMappingURL=main.css.map */

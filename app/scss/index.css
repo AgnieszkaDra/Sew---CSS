@@ -17,6 +17,11 @@ body {
   color: aliceblue;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 ul {
   list-style: none;
   text-decoration: none;
@@ -71,7 +76,7 @@ ul {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  background-color: cadetblue;
+  background-color: black;
 }
 
 .navbar {
@@ -135,7 +140,8 @@ ul {
     margin: 0;
     top: 0;
     bottom: 0;
-    left: -100%;
+    z-index: 1000;
+    left: 0%;
     width: 100%;
     padding: 1.5rem 1rem;
     background-color: gray;
@@ -148,15 +154,6 @@ ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    overflow-y: auto;
-    visibility: visible;
-    background-color: #6c757d;
-    -webkit-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
-    -webkit-transition-duration: .3s;
-            transition-duration: .3s;
-    -webkit-transition-property: left, visibility;
-    transition-property: left, visibility;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,13 +172,6 @@ ul {
   margin: 0 1vw;
   padding: calc(1vw *2);
   color: aliceblue;
-}
-
-.main {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  background-color: crimson;
 }
 
 .navbar__menu {
@@ -251,23 +241,207 @@ ul {
 }
 
 .absolute-dots {
-  width: 5.23585vw;
-  height: 5.23585vw;
-  background: radial-gradient(aliceblue 15%, black 0);
-  background-size: 15px 15px;
+  width: 7.85377vw;
+  height: 7.85377vw;
+  background: radial-gradient(aliceblue 20%, black 0);
+  background-size: 25% 25%;
   position: absolute;
   top: 0;
   left: calc(30vw + 5px);
 }
 
+.absolute-dots:hover {
+  -webkit-box-shadow: 2px 4px 8px 1px #de6916;
+          box-shadow: 2px 4px 8px 1px #de6916;
+}
+
 .absolute-rectangle {
-  width: 5.23585vw;
-  height: 2.61792vw;
+  width: 10.4717vw;
+  height: 3.92689vw;
   background-color: black;
-  border: 2px solid #de6916;
+  border: 3px solid #de6916;
   position: absolute;
   left: 25%;
   bottom: 0%;
+}
+
+.absolute-rectangle:hover {
+  -webkit-box-shadow: 20px black;
+          box-shadow: 20px black;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  background-color: crimson;
+  color: aliceblue;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  main {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main section:nth-child(1) {
+  background-image: url("Love1.jpg");
+  padding-bottom: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  position: relative;
+}
+
+section:nth-child(1) .section-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section:nth-child(2) {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 991px) {
+  main section:nth-child(1) {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    background-color: goldenrod;
+  }
+  main section:nth-child(2) {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+  }
+}
+
+main section:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainheadline {
+  font-family: 'Festive', cursive;
+  color: #de6916;
+  word-spacing: 2;
+  font-size: 4.2358vw;
+}
+
+.thirdheadline {
+  color: aliceblue;
+  font-size: 2.61792vw;
+}
+
+@media (max-width: 991px) {
+  .thirdheadline {
+    color: #de6916;
+  }
+}
+
+.form {
+  width: 400px;
+  height: 90px;
+  border: 2px solid #de6916;
+  border-radius: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  justify-self: flex-end;
+  height: calc(90px - 4px);
+  width: calc(400px - 250px);
+  border-radius: 2em;
+  background-color: #de6916;
+}
+
+button a {
+  color: aliceblue;
+  font-size: 1.618vw;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+form {
+  position: relative;
+}
+
+.dropdown {
+  width: 150px;
+}
+
+.dropdown-label {
+  padding: 0.5em;
+  width: 100px;
+}
+
+.dropdown-label::after {
+  content: '';
+  position: absolute;
+  right: 2em;
+  top: 1em;
+  border: 0.3em solid;
+  border-color: white transparent transparent;
+}
+
+form {
+  position: relative;
+}
+
+.formabsolute {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border: 0.3em solid;
+  border-color: red transparent transparent;
+}
+
+.dropdown:hover .dropdown-label::after {
+  top: 0.7em;
+  border-color: transparent transparent whitesmoke;
 }
 
 :root {
@@ -288,4 +462,4 @@ body {
   background-color: black;
   color: white;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */
